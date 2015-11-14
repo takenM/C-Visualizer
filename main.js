@@ -19,7 +19,7 @@ function main(){
         if( /int /.test(code[i]) ) {
             code[i] = code[i].replace(/int /, "");
             //console.log(code[i]);
-            variables.push({label: code[i], value: null});
+            variables.push({label: code[i], value: null, type: "int", array: false});
             console.log(variables);
         }
     }
