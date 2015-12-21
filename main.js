@@ -11,6 +11,7 @@ var debbug = document.getElementById("debbug");
 function main(){
     var code = new Array;
     var variables = new Array;
+    var tempCode = new Array;
 
     code = editor.getValue().split(";");
     console.log(code);
@@ -28,7 +29,10 @@ function main(){
         //変数宣言の場合
     }
     *****************************************************************************/
-
-    
+    for(var i = 0; i < code.length; i++){
+        tempCode = code[i].replace(/\n/, '');
+        tempCode = tempCode.split(/\s|,/);
+        console.log(tempCode);
+    }
 
 }
